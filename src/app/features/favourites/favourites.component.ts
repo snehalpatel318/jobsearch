@@ -13,6 +13,7 @@ import { JobsService } from '../services/jobs.service';
   styleUrl: './favourites.component.css'
 })
 export class FavouritesComponent implements OnInit {
+  [x: string]: any;
 
   jobsdata: Jobs[] = [];
 
@@ -20,9 +21,9 @@ export class FavouritesComponent implements OnInit {
   ngOnInit(): void {
     this.jobservice.getJobsData().subscribe((jobsdata) => {
       for(let i= 0 ; i < jobsdata.length ; i++) {
-        if(this.fav.includes(jobsdata[i]['id'])){
+        /* if(this.fav.includes(jobsdata[i]['id'])){
           this.jobsdata.push(jobsdata[i]);
-        }
+        } */
       }
     }
     );
