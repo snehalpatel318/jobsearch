@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="people-nearby" *ngFor="let job of jobsdata"> 
+              <div class="nearby-user">
+                <div class="row">
+                  <div class="col-md-2 col-sm-2">
+                    <img [attr.src]="job.companyLogo" alt="user" class="profile-photo-lg">
+                  </div>
+                  <div class="col-md-7 col-sm-7">
+                    <h3> <a routerLink="/jobs/{{job.id}}" routerLinkActive="router-link-active"  class="companyTitle">{{job.title}}</a></h3>
+                      <p class="text-black">Company:{{ job.companyName}}Reference: {{ job.reference}}</p>
+                  </div>
+                  <div class="col-2">
+                    <span class="icon-star favoritesbtn"  id="{{job.id}}"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+    	</div>
+	</div>
+</div>
