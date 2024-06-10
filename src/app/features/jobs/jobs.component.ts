@@ -9,7 +9,6 @@ import { JobsService } from '../services/jobs.service';
   selector: 'app-jobs',
   standalone: true,
   imports: [NgFor,JobsDetailsComponent,RouterLink],
-  providers:[JobsService],
   templateUrl: './jobs.component.html',
   styleUrl: './jobs.component.css'
 })
